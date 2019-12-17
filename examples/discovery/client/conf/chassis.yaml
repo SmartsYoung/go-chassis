@@ -11,8 +11,10 @@ cse:
       watch: true
   handler:
     chain:
+      Provider:
+        default: skywalking-provider
       Consumer:
-        default: bizkeeper-consumer,router,loadbalance,tracing-consumer,ratelimiter-consumer,transport
+        default: bizkeeper-consumer,router,loadbalance,tracing-consumer,ratelimiter-consumer,transport,skywalking-consumer
   transport:
     failure:
       rest: http_500,http_502

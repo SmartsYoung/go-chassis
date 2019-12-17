@@ -7,3 +7,12 @@ cse:
 tracing:
   collectorType: zipkin
   collectorTarget: http://localhost:9411/api/v1/spans
+
+servicecomb:
+  apm:                                #application performance monitor
+    tracing:
+      tracer: skywalking
+      settings:
+        enable: true                  #enable tracing ability
+        URI: 127.0.0.1:11800          #url of skywalking
+        serverType: 5001              #server type
